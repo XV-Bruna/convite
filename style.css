@@ -12,25 +12,72 @@ body {
     background: black;
 }
 
-
-/* telas */
 .tela {
     position: fixed;
     inset: 0;
     width: 100%;
     height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+/* fundo tablets/desktops */
+@media (min-width: 600px) {
+    body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: #050a1a;
+        z-index: -1;
+    }
+}
+
+.tela > * {
+    max-width: 100%;
+}
+
+/* Coluna central tablet/desktop */
+@media (min-width: 600px) {
+    .tela {
+        background: transparent;
+    }
+    .tela::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: min(430px, 90vw);
+        height: 100dvh;
+        max-height: 100dvh;
+        background: black;
+        border-radius: 0;
+        z-index: -1;
+        box-shadow: 0 0 80px rgba(1, 54, 170, 0.25), 0 0 160px rgba(1, 54, 170, 0.1);
+    }
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
-
 /* envelope */
+#tela-envelope {
+    cursor: pointer;
+}
+
 #tela-envelope .bg {
     transform: scale(1.12);
 }
 
+@media (min-width: 600px) {
+    #tela-envelope .bg {
+        width: min(430px, 90vw);
+        height: 100dvh;
+        object-fit: cover;
+        transform: scale(1.12);
+    }
+}
 
 /* video */
 #videoConvite {
@@ -42,18 +89,68 @@ body {
     background: black;
 }
 
+@media (min-width: 600px) {
+    #tela-video {
+        align-items: stretch;
+    }
+
+    #videoConvite {
+        position: relative;
+        width: min(430px, 90vw);
+        height: 100dvh;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+}
 
 /* infos */
 
-/* imagem principal */
+/* container interno tela-info */
+#tela-info {
+    position: fixed;
+    inset: 0;
+}
+
+@media (min-width: 600px) {
+    #tela-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #050a1a;
+    }
+}
+
+/* tela info pra pc */
+.info-inner {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+}
+
+@media (min-width: 600px) {
+    .info-inner {
+        width: min(430px, 90vw);
+        height: 100dvh;
+        overflow: hidden;
+        flex-shrink: 0;
+        box-shadow: 0 0 80px rgba(1, 54, 170, 0.3), 0 0 160px rgba(1, 54, 170, 0.1);
+    }
+}
+
+/* img principal */
 .bg {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+#imagemPrincipal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
-/* botão fechar */
 #btnFechar {
     position: absolute;
     top: 25px;
@@ -66,10 +163,10 @@ body {
     background: rgba(0, 0, 0, 0.6);
     color: white;
     z-index: 20;
+    cursor: pointer;
 }
 
-
-/* botão link presentes */
+/* botao link presentes*/
 .btn-link-presentes {
     position: absolute;
     bottom: 6%;
@@ -94,15 +191,16 @@ body {
     transform: translateX(-50%) scale(1.05);
 }
 
-
 /* menu */
 .menu-botoes {
     position: absolute;
     bottom: 1%;
-    width: 100%;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     gap: 18px;
+    z-index: 10;
 }
 
 .botao-menu {
@@ -111,6 +209,7 @@ body {
     align-items: center;
     gap: 6px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .botao-menu span {
@@ -120,7 +219,6 @@ body {
     text-align: center;
     letter-spacing: 1px;
 }
-
 
 /* icones */
 .icone {
@@ -155,8 +253,4 @@ body {
     outline: none;
     border: none;
     box-shadow: none;
-}
-
-.hidden {
-    display: none;
 }

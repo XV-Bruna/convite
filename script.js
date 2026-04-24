@@ -15,7 +15,7 @@ const imagemDress = "assets/dressCode.png";
 const imagemPresentes = "assets/listaDePresente.png";
 
 
-//envelope
+// envelope
 telaEnvelope.addEventListener("click", () => {
     telaEnvelope.classList.add("hidden");
     telaVideo.classList.remove("hidden");
