@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <title>Convite XV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- envelope -->
+    <section id="tela-envelope" class="tela">
+        <img src="assets/envelope.png" class="bg">
+    </section>
+
+
+    <!-- video -->
+    <section id="tela-video" class="tela hidden">
+        <video id="videoConvite" playsinline webkit-playsinline preload="auto">
+            <source src="assets/videoBruna.mp4" type="video/mp4">
+        </video>
+    </section>
+
+
+    <!-- infos -->
+    <section id="tela-info" class="tela hidden">
+
+        <img id="imagemPrincipal" src="assets/convite.png" class="bg">
+
+        <a id="btnLinkPresentes" href="https://quinze-anos-mhu6.listaideal.com.br/pt/" target="_blank"
+            class="btn-link-presentes hidden">
+            VEJA MINHA LISTA DE DESEJOS AQUI
+        </a>
+
+        <button id="btnFechar" class="hidden">✕</button>
+
+        <div class="menu-botoes" id="menuBotoes">
+
+            <a href="https://api.whatsapp.com/send?phone=5521981684560&text=Olá,%20me%20chamo%20______________________%20e%20quero%20confirmar%20a%20minha%20presença%20no%20aniversário%20da%20Bruna!"
+                target="_blank" class="botao-menu">
+
+                <div class="icone">
+                    <img src="assets/icons/envelope.png" class="iconImg">
+                </div>
+                <span class="tituloIcone">Confirmar <br> Presença</span>
+            </a>
+
+
+            <a href="https://maps.app.goo.gl/AC5mSWJZNwqnG2fs5" target="_blank" class="botao-menu">
+
+                <div class="icone">
+                    <img src="assets/icons/local.png" class="iconImg">
+                </div>
+                <span class="tituloIcone">Ver <br> rota</span>
+            </a>
+
+
+            <a href="#" class="botao-menu" id="btnPresentes">
+                <div class="icone">
+                    <img src="assets/icons/presente.png" class="iconImg">
+                </div>
+                <span class="tituloIcone">Lista de <br> Presentes</span>
+            </a>
+
+
+            <a class="botao-menu" id="btnDress">
+                <div class="icone">
+                    <img src="assets/icons/vestido.png" class="iconImg">
+                </div>
+                <span class="tituloIcone">Dress <br> Code</span>
+            </a>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

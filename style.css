@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    background: black;
+}
+
+
+/* telas */
+.tela {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* envelope */
+#tela-envelope .bg {
+    transform: scale(1.12);
+}
+
+
+/* video */
+#videoConvite {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: black;
+}
+
+
+/* infos */
+
+/* imagem principal */
+.bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* botão fechar */
+#btnFechar {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    font-size: 22px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    z-index: 20;
+}
+
+
+/* botão link presentes */
+.btn-link-presentes {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 5px 7px;
+    background: #193571;
+    color: #EAEAEA;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+    z-index: 30;
+    transition: 0.3s;
+}
+
+.btn-link-presentes:hover {
+    background: #092153;
+    transform: translateX(-50%) scale(1.05);
+}
+
+
+/* menu */
+.menu-botoes {
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.botao-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+.botao-menu span {
+    font-family: "Bree Serif", serif;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+/* icones */
+.icone {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #0136aa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: white;
+    backdrop-filter: blur(5px);
+    border: none;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.iconImg {
+    width: 32.5px;
+    height: 32.5px;
+}
+
+.icone:hover {
+    transform: scale(1.05);
+    background-color: #01236e;
+}
+
+.icone:focus,
+.icone:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.hidden {
+    display: none;
+}
