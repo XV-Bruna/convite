@@ -5,8 +5,7 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-html,
-body {
+html, body {
     height: 100%;
     overflow: hidden;
     background: black;
@@ -248,8 +247,7 @@ body {
     background-color: #01236e;
 }
 
-.icone:focus,
-.icone:active {
+.icone:focus, .icone:active {
     outline: none;
     border: none;
     box-shadow: none;
